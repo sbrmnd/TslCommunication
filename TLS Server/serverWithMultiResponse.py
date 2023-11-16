@@ -33,7 +33,10 @@ import ssl
 import socket
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-context.load_cert_chain(certfile='/home/ndm4kor/POC/TslCommunication/cert/server.crt', keyfile='/home/ndm4kor/POC/TslCommunication/cert/server.key')
+context.load_cert_chain(certfile='../cert/server.crt', keyfile='../cert/server.key')
+# Set the minimum and maximum TLS version to 1.3
+context.minimum_version = ssl.TLSVersion.TLSv1_3
+context.maximum_version = ssl.TLSVersion.TLSv1_3
 
 server_address = ('localhost', 12345)
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

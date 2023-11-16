@@ -65,7 +65,11 @@ import ssl
 import socket
 
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-context.load_verify_locations(cafile='/home/ndm4kor/POC/TslCommunication/cert/server.crt')
+context.load_verify_locations(cafile='../cert/server.crt')
+
+# Set the minimum and maximum TLS version to 1.3
+context.minimum_version = ssl.TLSVersion.TLSv1_3
+context.maximum_version = ssl.TLSVersion.TLSv1_3
 
 server_address = ('localhost', 12345)
 
