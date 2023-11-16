@@ -19,3 +19,4 @@ Here are the steps to set up an Ubuntu machine to run the server and client code
 - Copy the certificate files to the Ubuntu machine: Copy the server.key and server.crt files to the machine where you will run the server and client code.
 
 - Run the code: With Python and the required modules installed, you can now run the server and client code. Make sure to run the server code first, and then run the client code in another terminal window or on another machine.
+- python3 <application name>
